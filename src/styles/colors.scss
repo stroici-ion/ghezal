@@ -1,0 +1,42 @@
+:root {
+  --primaryColor: #2c2c2d;
+  --linkColor: #575758;
+
+  --primaryBackColor: #f5f5f5;
+  --primaryHoverColor: #f7ecce;
+
+  --secondaryColor: #f3e8ca;
+
+  --cartIndicatorColor: #d44538;
+
+  --categoriesIconColor: #79798e;
+
+  --favoriteColor: #d44538;
+  --favoriteBackColor: #ff6a0011;
+  --favoriteHoverColor: #ff6a0022;
+
+  --productImagesBackColor: #e8e9e3;
+  --productDetailsBackColor: #f3e8ca;
+
+  --white: #fff;
+  --black: #2d2d2d;
+}
+
+[data-theme='dark'] {
+  --primaryColor: #2c2c2d;
+  --linkColor: #575758;
+
+  --primaryBackColor: #f5f5f5;
+  --primaryHoverColor: #f7ecce;
+
+  --secondaryColor: #f3e8ca;
+
+  --cartIndicatorColor: #d44538;
+
+  --favoriteColor: #d44538;
+  --favoriteBackColor: #ff6a0011;
+  --favoriteHoverColor: #ff6a0022;
+
+  --white: #fff;
+  --black: #2d2d2d;
+}

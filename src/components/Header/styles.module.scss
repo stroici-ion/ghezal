@@ -1,0 +1,17 @@
+.root {
+  background-color: var(--primaryBackColor);
+  padding: 15px 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  transition: 0.2s;
+}

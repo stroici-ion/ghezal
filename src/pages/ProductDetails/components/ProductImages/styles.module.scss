@@ -1,0 +1,9 @@
+.root {
+  aspect-ratio: 1;
+  background-color: var(--productImagesBackColor);
+  border-radius: 20px;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

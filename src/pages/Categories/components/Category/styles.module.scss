@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+  background-color: var(--white);
+  aspect-ratio: 1;
+  border-radius: 20px;
+
+  &__icon {
+    font-size: 40px;
+    color: var(--categoriesIconColor);
+    margin-bottom: 10px;
+  }
+
+  font-size: 16px;
+  color: var(--primaryColor);
+  font-weight: 500;
+}

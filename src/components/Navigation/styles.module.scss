@@ -1,0 +1,35 @@
+.root {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+
+  &__panel {
+    border-radius: 100px;
+    padding: 5px;
+    background-color: #e0e1d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  &__button {
+    transition: 0.2s;
+    &.active {
+      background-color: var(--primaryColor);
+      color: var(--white);
+    }
+  }
+
+  transition: 0.2s;
+
+  &.hidden {
+    transform: translate(0, 100px);
+  }
+}

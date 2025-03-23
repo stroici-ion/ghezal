@@ -1,0 +1,22 @@
+.root {
+  position: relative;
+  &__indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 14px;
+    border-radius: 10px;
+    font-size: 9px;
+
+    color: var(--white);
+    background-color: var(--cartIndicatorColor);
+  }
+
+  &__button {
+    background-color: var(--primaryColor);
+    color: var(--white);
+  }
+}

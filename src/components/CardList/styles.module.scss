@@ -1,0 +1,28 @@
+.root {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; // Default for phones
+  gap: 10px;
+
+  padding-bottom: 100px;
+
+  @media (min-width: 768px) {
+    // Tablets
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    // Small laptops
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1280px) {
+    // Larger screens
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1600px) {
+    // Extra-large screens
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

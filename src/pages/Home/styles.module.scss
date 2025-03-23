@@ -1,0 +1,12 @@
+.root {
+  position: relative;
+  &.disabled {
+    user-select: none;
+  }
+
+  &__title {
+    padding: 15px;
+    font-size: 24px;
+    color: var(--primaryColor);
+  }
+}
