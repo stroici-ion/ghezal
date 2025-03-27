@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryColor);
+
+  padding: 10px 15px;
+  border-radius: 100px;
+  border: 1px solid var(--primaryBorderColor);
+  font-size: 14px;
+  gap: 5px;
+  &__icon {
+    color: #ead258;
+  }
+}

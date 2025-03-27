@@ -1,17 +1,16 @@
-import React, { JSX } from 'react';
-import { LuShoppingCart } from 'react-icons/lu';
-import { GoHeart } from 'react-icons/go';
+import React, { JSX } from "react";
+import { LuShoppingCart } from "react-icons/lu";
+import { GoHeart } from "react-icons/go";
+import classNames from "classnames";
+import { useNavigate } from "react-router-dom";
 
-import styles from './styles.module.scss';
-import PrimaryButton from '../PrimaryButton';
-import testImage from '../../images/products/02.png';
-import { TProduct } from '../../redux/products/types';
-import { useAppDispatch } from '../../redux';
-import { addCartItem } from '../../redux/cart/slice';
-import { useSelector } from 'react-redux';
-import { selectCartItems } from '../../redux/cart/selectors';
-import classNames from 'classnames';
-import { useNavigate } from 'react-router-dom';
+import styles from "./styles.module.scss";
+import PrimaryButton from "../PrimaryButton";
+import { TProduct } from "../../redux/products/types";
+import { useAppDispatch } from "../../redux";
+import { addCartItem } from "../../redux/cart/slice";
+import { useSelector } from "react-redux";
+import { selectCartItems } from "../../redux/cart/selectors";
 
 interface ProductProps {
   product: TProduct;
@@ -31,9 +30,17 @@ const Product: React.FC<ProductProps> = ({ product }) => {
 
   return (
     <div className={styles.root}>
-      <PrimaryButton icon={<GoHeart />} size="sm" onClick={() => {}} className={styles.root__favoriteButton} />
+      <PrimaryButton
+        icon={<GoHeart />}
+        size="sm"
+        onClick={() => {}}
+        className={styles.root__favoriteButton}
+      />
       <div className={styles.root__imageContainer}>
-        <div className={styles.root__image} style={{ backgroundImage: `url(${product.imageUrl})` }} />
+        <div
+          className={styles.root__image}
+          style={{ backgroundImage: `url(${product.imageUrl})` }}
+        />
       </div>
       <div className={styles.root__info}>
         <h2 className={styles.root__title}>
@@ -46,10 +53,13 @@ const Product: React.FC<ProductProps> = ({ product }) => {
       <div className={styles.root__actions}>
         <PrimaryButton
           icon={<LuShoppingCart />}
-          title={isInCart ? 'În coș' : 'Adaugă în coș'}
+          title={isInCart ? "În coș" : "Adaugă în coș"}
           size="sm"
           onClick={handleAddToCart}
-          className={classNames(styles.root__cartButton, isInCart && styles.active)}
+          className={classNames(
+            styles.root__cartButton,
+            isInCart && styles.active
+          )}
         />
       </div>
     </div>

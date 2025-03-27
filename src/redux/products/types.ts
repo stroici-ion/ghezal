@@ -8,4 +8,5 @@ export type TProduct = {
   imageUrl: string;
   price: number;
   categoryId?: number;
+  colors?: string[];
 };

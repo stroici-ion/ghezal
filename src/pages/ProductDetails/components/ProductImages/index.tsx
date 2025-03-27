@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import styles from './styles.module.scss';
-import { TProduct } from '../../../../redux/products/types';
+import styles from "./styles.module.scss";
+import { TProduct } from "../../../../redux/products/types";
 
 interface ProductImagesProps {
   product: TProduct;
@@ -9,8 +9,11 @@ interface ProductImagesProps {
 
 const ProductImages: React.FC<ProductImagesProps> = ({ product }) => {
   return (
-    <div>
-      <div className={styles.root} style={{ backgroundImage: `url(${product.imageUrl})` }}></div>
+    <div className={styles.root}>
+      <div
+        className={styles.root__image}
+        style={{ backgroundImage: `url(${product.imageUrl})` }}
+      ></div>
     </div>
   );
 };
