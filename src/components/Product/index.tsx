@@ -24,6 +24,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   const handleAddToCart = () => {
     dispatch(selectProduct(product));
     navigate(`/${product.id}`);
+    navigate(`/${product.id}`);
   };
 
   const isInCart = cartItems.map((cI) => cI.product.id).includes(product.id);
