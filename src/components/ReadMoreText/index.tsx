@@ -43,29 +43,25 @@ const ExtensibleText: React.FC<CommentTextType> = ({
   useOnResize(checkTextOverflows);
 
   return (
-    <div>
+    <div className={styles.root}>
       <p
         ref={textRef}
-        className={classNames(styles.text, className)}
+        className={classNames(styles.root__text, className)}
         style={{
-          display: '-webkit-box',
           WebkitLineClamp: isExpaned ? maxDisplayedRows : displayedRows,
-          WebkitBoxOrient: 'vertical',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
         }}
       >
-        {mentionedUser?.id && <span className={styles.text__mentionedUser}>{mentionedUser.username} </span>}
+        {mentionedUser?.id && <span className={styles.root__mentionedUser}>{mentionedUser.username} </span>}
         {text}
       </p>
-      <div className={styles.text__row}>
+      <div className={styles.root__row}>
         {isOverflowing ? (
           <>
-            <button className={styles.text__button} onClick={onClickSeeMore}>
-              {isExpaned ? 'Hide' : 'See more'}
+            <button className={styles.root__button} onClick={onClickSeeMore}>
+              {isExpaned ? 'Ascunde' : 'Mai mult'}
             </button>
             {isExpaned && (
-              <button onClick={showAll} className={classNames(styles.text__button, styles.text__showAll)}>
+              <button onClick={showAll} className={classNames(styles.root__button, styles.root__showAll)}>
                 Show all
               </button>
             )}
@@ -73,8 +69,8 @@ const ExtensibleText: React.FC<CommentTextType> = ({
         ) : (
           <>
             {isExpaned && (
-              <button onClick={onClickSeeMore} className={styles.text__button}>
-                Hide
+              <button onClick={onClickSeeMore} className={styles.root__button}>
+                Ascunde
               </button>
             )}
           </>

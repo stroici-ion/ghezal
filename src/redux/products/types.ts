@@ -5,7 +5,7 @@ export interface IProductsState {
 export type TProduct = {
   id: number;
   title: string;
-  imageUrl: string;
+  imageUrls: string[];
   price: number;
   categoryId?: number;
   colors?: string[];

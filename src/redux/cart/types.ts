@@ -6,6 +6,7 @@ export interface ICartState {
 }
 
 export type TCartItem = {
+  id: number;
   product: TProduct;
   selectedColor: string;
   selectedMaterial: string;

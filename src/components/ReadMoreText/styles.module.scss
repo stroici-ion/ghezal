@@ -1,8 +1,14 @@
-.text {
-  position: relative;
-  text-align: justify;
-  font-size: 15px;
-  color: var(--linkColor);
+.root {
+  &__text {
+    position: relative;
+    text-align: justify;
+    font-size: 15px;
+    color: var(--linkColor);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   &__showAll {
     margin-left: 20px;

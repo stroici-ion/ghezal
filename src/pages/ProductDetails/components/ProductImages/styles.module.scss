@@ -1,13 +1,49 @@
 .root {
-  aspect-ratio: 1;
+  position: relative;
   background-color: var(--productImagesBackColor);
   border-radius: 20px;
   padding: 25px;
-  display: flex;
+
+  &__slider {
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    height: 300px;
+    flex: 0 0 300px;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
   &__image {
-    flex: 1 1 auto;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  &__dots {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--white);
+
+    &.active {
+      background-color: var(--primaryColor);
+    }
   }
 }
